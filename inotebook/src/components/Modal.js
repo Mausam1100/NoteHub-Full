@@ -17,7 +17,7 @@ function Modal() {
     }
   return (
     <div className='w-full h-full fixed inset-0 flex items-center justify-center backdrop-brightness-50'>
-        <div className='bg-white rounded-md p-5 w-2/6'>
+        <div className='bg-white rounded-md p-5 w-[90%] sm:w-[70%] max-w-[600px]'>
             <h2 className='text-xl font-semibold'>Edit Note</h2>
             <div className='py-4 space-y-3'>
             <div className='space-y-2'>

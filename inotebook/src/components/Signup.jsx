@@ -38,7 +38,7 @@ function Signin(props) {
         e.preventDefault()
         props.setProgress(20)
         if (newAcc.password === newAcc.cpassword) {
-            const response = await fetch(process.env.REACT_APP_URL + process.env.REACT_APP_SIGNIN_URL, {
+            const response = await fetch(`${process.env.REACT_APP_URL}/api/auth/createUser`, {
                 method: "POST",
                 headers: {
                   "Content-Type": "application/json"

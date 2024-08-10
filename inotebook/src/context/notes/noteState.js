@@ -25,7 +25,7 @@ const NoteState = (props) => {
   // Get all notes from mongo to client
   const getNotes = async () => {
     // TODO: API Call
-    const response = await fetch(process.env.REACT_APP_URL + process.env.REACT_APP_GETNOTE_URL, {
+    const response = await fetch(`${process.env.REACT_APP_URL}/api/notes/fetchallnotes`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -40,7 +40,7 @@ const NoteState = (props) => {
   // add a note
   const addNote = async (title, description, tag) => {
     // TODO: API Call
-    const response = await fetch(process.env.REACT_APP_URL + process.env.REACT_APP_ADDNOTE_URL, {
+    const response = await fetch(`${process.env.REACT_APP_URL}/api/notes/addnote`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -58,7 +58,7 @@ const NoteState = (props) => {
   //delete a note
   const deleteNote = async(id) => {
     // TODO: API Call
-    const response = await fetch(`${process.env.REACT_APP_URL + process.env.REACT_APP_DELETENOTE_URL}${id}`, {
+    const response = await fetch(`${process.env.REACT_APP_URL}/api/notes/deletenote/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -81,7 +81,7 @@ const NoteState = (props) => {
   //edit a note
   const editNote = async (id, title, description, tag) => {
     // TODO: API Call
-    const response = await fetch(`${process.env.REACT_APP_URL + process.env.REACT_APP_EDITNOTE_URL}${id}`, {
+    const response = await fetch(`${process.env.REACT_APP_URL}/api/notes/updatenote/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

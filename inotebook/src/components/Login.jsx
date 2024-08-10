@@ -28,7 +28,7 @@ function Login(props) {
     const handleClick = async (e) => {
         e.preventDefault();
         props.setProgress(20)
-        const response = await fetch(process.env.REACT_APP_URL + process.env.REACT_APP_LOGIN_URL, {
+        const response = await fetch(`${process.env.REACT_APP_URL}/api/auth/login`, {
             method: "POST",
             headers: {
               "Content-Type": "application/json"

@@ -1,9 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
-function About(props) {
-  useEffect (() => {
-    props.setProgress(100)
-  }, [])
+function About() {
+
   return (
     <div className="min-h-screen bg-white flex items-center justify-center">
       <div className="max-w-4xl bg-white shadow-lg rounded-lg p-8">

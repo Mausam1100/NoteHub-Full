@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .setWidth {
+        @apply w-[90%] max-w-[1400px] mx-auto
+    }
+
+    .active {
+        @apply text-white
+    }
+
+    .info input:focus~label,
+    .info input:valid~label {
+        top: 0px;
+        color: white;
+        background-color:  rgb(100 116 139);
+        font-size: 0.88rem;
+        padding: 2px 8px;
+        border-radius: 10px;
+        transition: all .3s ease-out;
+    }
+
+    input:focus {
+        outline: none;
+    }
+}
